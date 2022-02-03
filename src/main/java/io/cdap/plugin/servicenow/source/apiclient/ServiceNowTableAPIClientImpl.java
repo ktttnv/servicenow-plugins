@@ -31,6 +31,7 @@ import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,7 +41,7 @@ import java.util.Map;
 /**
  * Implementation class for ServiceNow Table API.
  */
-public class ServiceNowTableAPIClientImpl extends RestAPIClient {
+public class ServiceNowTableAPIClientImpl extends RestAPIClient implements Serializable {
   private static final Logger LOG = LoggerFactory.getLogger(ServiceNowTableAPIClientImpl.class);
   private static final String DATE_RANGE_TEMPLATE = "%sBETWEENjavascript:gs.dateGenerate('%s','start')" +
     "@javascript:gs.dateGenerate('%s','end')";
